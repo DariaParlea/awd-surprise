@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Surprise: a word with two faces</title>
+  <meta name="description" content="A research project on the word surprise: what it means to me, to other people and to the dictionary, where it comes from, and why a surprise fades when you expect it.">
+  <meta name="author" content="Parlea Daria Lorelai">
+  <meta name="theme-color" content="#652bb0">
+
+  <!-- Open Graph: how the page looks when the link is shared -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Surprise: a word with two faces">
+  <meta property="og:description" content="Yellow, pink and a gift with a bow for most people. Disappointment for me. A small study of the word surprise.">
+  <meta property="og:locale" content="en_GB">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&amp;family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&amp;display=swap">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Structured data: tells search engines what this page is about -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Surprise: a word with two faces",
+    "description": "A research project on the word surprise: personal, social and formal meanings, origin, contexts and derived forms.",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "Parlea Daria Lorelai"
+    },
+    "about": {
+      "@type": "DefinedTerm",
+      "name": "surprise",
+      "description": "An event or piece of news that is unexpected, or the feeling it causes.",
+      "inDefinedTermSet": "https://www.oxfordlearnersdictionaries.com/definition/english/surprise"
+    },
+    "citation": [
+      "https://www.etymonline.com/word/surprise",
+      "https://www.oxfordlearnersdictionaries.com/definition/english/surprise",
+      "https://www.paulekman.com/emotions/surprise/",
+      "https://people.csail.mit.edu/dmoshkov/courses/codes/shannon1948.pdf",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC3866681"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top">surprise</a>
+      <nav aria-label="Sections">
+        <ul class="nav-list">
+          <li><a href="#people">People</a></li>
+          <li><a href="#me">Me</a></li>
+          <li><a href="#word">The word</a></li>
+          <li><a href="#why">Why it fades</a></li>
+          <li><a href="#contexts">Contexts</a></li>
+          <li><a href="#play">Play</a></li>
+        </ul>
+      </nav>
+      <div class="a11y-tools" id="a11y-tools" hidden>
+        <button type="button" class="tool" id="text-size" aria-pressed="false">Larger text</button>
+        <button type="button" class="tool" id="theme-toggle" aria-pressed="false">Dark mode</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- HERO: the box the visitor can open -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="wrap hero-grid">
+        <div class="hero-text">
+          <h1 id="hero-title">Surprise has two faces.</h1>
+          <p class="lead">For most people I asked, a surprise is yellow, pink, a gift with a bow. For me it is the moment I find out my hopes were too high. I explored both sides of the word.</p>
+          <p class="hero-hint" id="box-hint">There is a gift box on this page. Open it.</p>
+        </div>
+
+        <div class="box-stage">
+          <svg class="gift" id="gift" viewBox="0 0 240 240" role="img" aria-labelledby="gift-title">
+            <title id="gift-title">A wrapped gift box with a bow</title>
+            <g class="burst" aria-hidden="true">
+              <circle cx="60" cy="70" r="7" class="c-sun"/>
+              <circle cx="185" cy="58" r="6" class="c-rose"/>
+              <rect x="110" y="20" width="12" height="12" rx="2" class="c-plum" transform="rotate(20 116 26)"/>
+              <rect x="38" y="112" width="10" height="10" rx="2" class="c-rose" transform="rotate(-15 43 117)"/>
+              <circle cx="200" cy="110" r="5" class="c-sun"/>
+              <path d="M150 30 l6 12 l13 2 l-9 9 l2 13 l-12 -6 l-12 6 l2 -13 l-9 -9 l13 -2 z" class="c-sun"/>
+              <path d="M78 26 l4 8 l9 1 l-6 6 l1 9 l-8 -4 l-8 4 l1 -9 l-6 -6 l9 -1 z" class="c-plum"/>
+            </g>
+            <g class="box-body">
+              <rect x="50" y="118" width="140" height="96" rx="6" class="box-fill"/>
+              <rect x="111" y="118" width="18" height="96" class="ribbon"/>
+            </g>
+            <g class="box-lid">
+              <rect x="40" y="94" width="160" height="28" rx="6" class="lid-fill"/>
+              <rect x="111" y="94" width="18" height="28" class="ribbon"/>
+              <path d="M120 94 C 92 62, 70 78, 86 92 Z" class="bow"/>
+              <path d="M120 94 C 148 62, 170 78, 154 92 Z" class="bow"/>
+              <circle cx="120" cy="92" r="7" class="ribbon"/>
+            </g>
+          </svg>
+          <button type="button" class="box-button" id="box-button" hidden>Open the box</button>
+          <p class="box-message" id="box-message" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- OTHER PEOPLE -->
+    <section class="section" id="people" aria-labelledby="people-title">
+      <div class="wrap">
+        <h2 id="people-title">What other people said</h2>
+        <p class="section-lead">I asked people the same question: what comes to mind when you think about the word surprise? The answers were mixed. Everyone thought of something positive, but only some also thought about the negative side of the word.</p>
+
+        <div class="quotes">
+          <figure class="quote card-sun">
+            <blockquote><p>Somebody has good news about me or about themselves. It could be a present, or good news about us.</p></blockquote>
+          </figure>
+          <figure class="quote card-plum">
+            <blockquote><p>A gift, good news, yellow, positive emotions.</p></blockquote>
+          </figure>
+          <figure class="quote card-rose">
+            <blockquote><p>A surprise can be of two kinds: a good thing or a bad thing.</p></blockquote>
+          </figure>
+          <figure class="quote card-sun">
+            <blockquote><p>Pink, purple, joy, unexpected, unknown, good.</p></blockquote>
+          </figure>
+          <figure class="quote card-plum">
+            <blockquote><p>Something with a bow, a gift. Positive feelings.</p></blockquote>
+          </figure>
+          <figure class="quote card-sun">
+            <blockquote><p>To me, a surprise means doing something that makes others happy, even when it takes a lot of effort. You see the joy of the people you surprise, and you are happy in turn when others do it for you. Whatever the surprise or the gesture, I think being surprised is the most beautiful feeling. And I believe no effort is too big to surprise someone.</p></blockquote>
+          </figure>
+        </div>
+
+        <h3>The colours they chose</h3>
+        <p>When people named a colour, it was always a bright one. These three became the palette of this site.</p>
+        <ul class="swatches">
+          <li><span class="swatch swatch-sun" aria-hidden="true"></span><span><strong>Yellow</strong> good news, light</span></li>
+          <li><span class="swatch swatch-rose" aria-hidden="true"></span><span><strong>Pink</strong> joy, a present</span></li>
+          <li><span class="swatch swatch-plum" aria-hidden="true"></span><span><strong>Purple</strong> the unknown</span></li>
+          <li><span class="swatch swatch-sky" aria-hidden="true"></span><span><strong>Light blue</strong> my own colour for it</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ME -->
+    <section class="section section-sky" id="me" aria-labelledby="me-title">
+      <div class="wrap">
+        <h2 id="me-title">What it means to me</h2>
+        <p class="section-lead">When I hear the word surprise, I think of disappointment first.</p>
+        <p>I get excited. Then I start to get my hopes up. In the end I am either disappointed or I feel nothing at all, because the surprise did not happen, or because it was so predictable that I saw it coming and it lost its meaning.</p>
+
+        <ol class="steps">
+          <li><span class="step-name">Excitement</span> Something is coming.</li>
+          <li><span class="step-name">Hope</span> I imagine what it will be, and the picture keeps growing.</li>
+          <li><span class="step-name">The ending</span> It does not come, and I am disappointed. Or it comes, but I guessed it, and I feel nothing.</li>
+        </ol>
+        <p class="pull">The waiting is what takes the surprise away. The more I expect, the less there is left to surprise me.</p>
+      </div>
+    </section>
+
+    <!-- THE WORD -->
+    <section class="section" id="word" aria-labelledby="word-title">
+      <div class="wrap">
+        <h2 id="word-title">Where the word comes from</h2>
+        <p class="section-lead">To be surprised is, quite literally, to be overtaken: caught before you could get ready.</p>
+
+        <div class="two-col">
+          <div>
+            <h3>In the dictionary</h3>
+            <dl class="defs">
+              <dt>surprise <span class="pos">noun</span></dt>
+              <dd>An event or piece of news that is unexpected or happens suddenly.</dd>
+              <dd>The feeling caused by something happening suddenly or unexpectedly.</dd>
+              <dt>surprise <span class="pos">verb</span></dt>
+              <dd>To make someone feel surprised.</dd>
+              <dd>To attack, find or catch someone suddenly and unexpectedly.</dd>
+            </dl>
+          </div>
+
+          <div>
+            <h3>How the meaning changed</h3>
+            <ol class="timeline">
+              <li><span class="when">Latin</span> <i lang="la">prehendere</i>, to grasp or seize.</li>
+              <li><span class="when">1100s</span> Old French <i lang="fr">sorprendre</i>: <i lang="fr">sur</i> (over) and <i lang="fr">prendre</i> (to take).</li>
+              <li><span class="when">Late 1300s</span> Reaches English as a military word: an unexpected attack or capture.</li>
+              <li><span class="when">1590s</span> Starts to mean anything unexpected.</li>
+              <li><span class="when">About 1600</span> Starts to mean the feeling of astonishment.</li>
+              <li><span class="when">1708</span> Also the name of a dish that looked plain but was full of variety inside.</li>
+              <li><span class="when">1857</span> The surprise party, which in 1826 had meant a hidden group of soldiers.</li>
+            </ol>
+          </div>
+        </div>
+
+        <p>The same root is inside <i>comprehend</i>, <i>apprehend</i> and <i>enterprise</i>. Romanian took the word from French as <i lang="ro">surpriză</i>.</p>
+      </div>
+    </section>
+
+    <!-- WHY IT FADES -->
+    <section class="section" id="why" aria-labelledby="why-title">
+      <div class="wrap">
+        <h2 id="why-title">Why a surprise fades when you expect it</h2>
+        <p class="section-lead">My feeling about surprises turns out to have a name in three different sciences.</p>
+
+        <div class="three-col">
+          <article class="fact">
+            <h3>In the brain</h3>
+            <p>Dopamine neurons fire when a reward is better than expected. A reward you fully expected gets no response at all. An expected reward that never comes makes their activity drop below normal.</p>
+            <p class="fact-tie">That drop is my disappointment.</p>
+          </article>
+          <article class="fact">
+            <h3>In emotion research</h3>
+            <p>Psychologist Paul Ekman counts surprise among the basic emotions. It is the shortest one, lasting a few seconds before joy or fear takes over. You cannot feel it about something you correctly predicted.</p>
+            <p class="fact-tie">That is my "feel nothing".</p>
+          </article>
+          <article class="fact">
+            <h3>In mathematics</h3>
+            <p>Information theory measures surprise as a number called <dfn>surprisal</dfn>. The less likely an event, the higher it is. An event you are certain of has a surprisal of zero.</p>
+            <p class="fact-tie">A predictable surprise is, mathematically, no surprise.</p>
+          </article>
+        </div>
+
+        <div class="table-wrap">
+          <table class="surprisal">
+            <caption>How surprising an event is, measured in bits (surprisal = −log<sub>2</sub> of its probability)</caption>
+            <thead>
+              <tr><th scope="col">What happens</th><th scope="col">Chance</th><th scope="col">Surprisal</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">A present you already know about</th><td>1 in 1</td><td>0 bits</td></tr>
+              <tr><th scope="row">A coin lands heads</th><td>1 in 2</td><td>1 bit</td></tr>
+              <tr><th scope="row">A die shows a six</th><td>1 in 6</td><td>2.6 bits</td></tr>
+              <tr><th scope="row">A friend appears with no warning</th><td>1 in 100</td><td>6.6 bits</td></tr>
+              <tr><th scope="row">Winning the lottery jackpot</th><td>1 in 14 million</td><td>23.7 bits</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTEXTS -->
+    <section class="section" id="contexts" aria-labelledby="contexts-title">
+      <div class="wrap">
+        <h2 id="contexts-title">From a birthday to the impossible</h2>
+        <p class="section-lead">I started with the most ordinary surprise and kept moving it further away from home.</p>
+
+        <ol class="contexts">
+          <li>
+            <h3>Specific</h3>
+            <p>A birthday surprise, or a gift you have been waiting for. This is the one in my own notes.</p>
+          </li>
+          <li>
+            <h3>Wider</h3>
+            <p>In war, where the word began: armies still talk about the element of surprise. In stories, the plot twist. In music, a chord you did not see coming.</p>
+          </li>
+          <li>
+            <h3>Unlikely</h3>
+            <p>Surprise is the name of a real city in Arizona. Language models are trained by measuring how surprised they are by the next word. In 1708, a surprise was something you could eat.</p>
+          </li>
+          <li>
+            <h3>Impossible</h3>
+            <p>Surprising yourself on purpose. A surprise party everyone knows about, including you. Being surprised by the same thing twice.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- DERIVED FORMS -->
+    <section class="section" id="forms" aria-labelledby="forms-title">
+      <div class="wrap">
+        <h2 id="forms-title">One word, many forms</h2>
+        <p class="section-lead">Each form moves the surprise to someone else: the giver, the one who receives it, or the thing itself.</p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th scope="col">Form</th><th scope="col">Kind</th><th scope="col">Who or what it points at</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">surprise</th><td>noun, verb</td><td>The event, or the act of causing it</td></tr>
+              <tr><th scope="row">surprised</th><td>adjective</td><td>The person it happens to</td></tr>
+              <tr><th scope="row">surprising</th><td>adjective</td><td>The thing that causes it</td></tr>
+              <tr><th scope="row">surprisingly</th><td>adverb</td><td>A small twist inside a sentence</td></tr>
+              <tr><th scope="row">unsurprising</th><td>adjective</td><td>The predictable, my "feel nothing" ending</td></tr>
+              <tr><th scope="row">surprisal</th><td>noun</td><td>Surprise as a number</td></tr>
+              <tr><th scope="row">taken by surprise</th><td>phrase</td><td>Surprise as an ambush</td></tr>
+              <tr><th scope="row">surprise party</th><td>phrase</td><td>Surprise as a gift</td></tr>
+              <tr><th scope="row" lang="ro">surpriză, surprins</th><td>Romanian</td><td>The same family in my own language</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- PLAY -->
+    <section class="section section-play" id="play" aria-labelledby="play-title">
+      <div class="wrap">
+        <h2 id="play-title">Breaking the word apart</h2>
+        <p class="section-lead">Cut in a different place, the word tells my story by itself: SURP, then RISE.</p>
+
+        <div class="splits">
+          <p><span class="part">SUR</span><span class="part part-alt">PRISE</span> over, and taken</p>
+          <p><span class="part">SURP</span><span class="part part-alt">RISE</span> the hope that rises before it falls</p>
+          <p><span class="part">SURE</span><span class="part part-alt">PRIZE</span> how it sounds, though a surprise is never sure</p>
+        </div>
+
+        <h3>Rearrange the letters</h3>
+        <p>The same eight letters also spell <strong>UPRISERS</strong>, and hide <i>rise</i>, <i>super</i>, <i>purse</i>, <i>ruse</i>, <i>spire</i> and <i>ripe</i>.</p>
+        <p class="letters" id="letters" aria-live="polite">SURPRISE</p>
+        <div class="play-buttons">
+          <button type="button" class="btn" id="shuffle" hidden>Shuffle the letters</button>
+          <button type="button" class="btn btn-quiet" id="reset" hidden>Put them back</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ENDING -->
+    <section class="section ending" id="ending" aria-labelledby="ending-title">
+      <div class="wrap">
+        <h2 id="ending-title">Both faces are true</h2>
+        <p>The people I asked remember the bow and the yellow. I remember the waiting. The science says we are describing the same thing from two ends: a surprise is bright only while you cannot predict it.</p>
+        <p>So the best surprise might be the one nobody tells you is coming. Including this page, which you probably did not expect to end with a question: when was the last time something truly surprised you?</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p class="credit">Realised by Parlea Daria Lorelai, 2026.</p>
+      <p><a href="#top">Back to the top</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
